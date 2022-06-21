@@ -20,3 +20,9 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+
+- task: AngularCLI@1
+  inputs:
+    command: 'build'
+    arguments: 'nx run-many --target=test --all'
+    DisableAnalytics: false
